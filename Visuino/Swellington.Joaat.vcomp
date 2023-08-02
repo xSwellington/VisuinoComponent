@@ -1,0 +1,13 @@
+Swellington : Namespace
+
+    [ArduinoInclude('Swellington_Joaat.h')]
+    [ArduinoClass('Swellington::Joaat')]
+    [Name('Joaat')]
+    [CreateName('Joaat')]
+    [ArduinoWebKeywords('Joaat')]
+    [Category(TArduinoUnsignedToolbarCategory)]
+    +TArduinoJoaat: TArduinoCommonTextSink
+        [OWPrimaryPin]
+        OutputPin : TOWArduinoUnsignedSourcePin
+    ;
+;

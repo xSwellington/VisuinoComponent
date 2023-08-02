@@ -1,0 +1,42 @@
+Swellington : Namespace
+
+[ArduinoLibrary( 'RFID_MFRC522v2', 'https://github.com/OSSLibraries/Arduino_MFRC522v2')]
+[ArduinoInclude('Swellington_RFID_SPI.h')]
+[ArduinoClass('Swellington::RFID_SPI')]
+[Name('RFID Tag Reader')]
+[CreateName('RfIdTagReader')]
+[ArduinoWebKeywords('RFID')]
+[Category(TArduinoAnalogMeasurementToolbarCategory)]
+[ArduinoInit]
+[ArduinoLoopBegin]
++TArduinoRFIDTagReader_SPI :  TArduinoBasicEnableSPI
+    
+    [OWExcludeBindings]
+    [PropertyFixedListDesign]    
+    [PropertyListDesignValue('18')]
+    [PropertyListDesignValue('23')]
+    [PropertyListDesignValue('33')]
+    [PropertyListDesignValue('38')]
+    [PropertyListDesignValue('43')]
+    [PropertyListDesignValue('48')]    
+    [NamePostfix( '(dB)' )]
+    AntennaGain: Unsigned = 18
+    
+    [OWExcludeBindings]
+    CheckInterval: Unsigned = 200    
+
+    [OWPrimaryPin]
+    TagKeyOutputPin : TOWArduinoStringSourcePin
+
+
+    [OWPrimaryPin]
+    [ArduinoExclude]
+    [OWRequiredPin]
+    [ArduinoDirectPinTemplate]
+    ChipSelectOutputPin
+
+
+    StartedOutputPin : TOWArduinoDigitalSourcePin
+; 
+
+; // Swellington
