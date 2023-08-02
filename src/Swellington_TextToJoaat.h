@@ -6,7 +6,7 @@ namespace Swellington
 {
 
     template <typename T_OutputPin>
-    class Joaat : public T_OutputPin
+    class TextToJoaat : public T_OutputPin
     {
     private:
         static uint32_t _joaat(const Mitov::String &str)
