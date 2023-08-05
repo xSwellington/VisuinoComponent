@@ -1,0 +1,13 @@
+Swellington: Namespace
+
+  [ArduinoInclude( 'Swellington_InverseSqrt.h' )]
+  [ArduinoClass( 'Mitov::UnaryOperation' )]
+  [Category( TArduinoAnalogMathFilterToolbarCategory )]
+  [ArduinoTemplateParameter( 'BASE', 'Swellington::InverseSquareRoot' )]
+  [ArduinoTemplateParameter( 'TYPE', 'float' )]
+  [Name( 'Inverse Square Root' )]
+  [CreateName( 'InverseSquareRoot' )]
+  [ParentImage(TArduinoSquareRoot)]
+  +TArduinoInverseSquareRoot : TArduinoCommonAnalogFilter;
+  
+;
