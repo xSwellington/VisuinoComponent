@@ -1,0 +1,31 @@
+Swellington: Namespace
+
+    [ArduinoClass('Swellington::TArduinoRFID522Key')]
+    [ParentImage( TArduinoMemoryInteger8Element )]
+    *TArduinoRFID522Key: TArduinoCodePersistent
+        [OWPrimaryPin]
+        OutputPin: TOWArduinoUnsignedSourcePin
+    ;
+
+    [ArduinoInclude('Swellington_RFID522_SPI.h')]
+    [ArduinoClass('Swellington::RFID522_SPI')]
+    [CreateName('RFID522')]
+    [Name('RFID 522 SPI')]
+    [ArduinoInit]
+    +TArduinoRFID522_SPI: TArduinoBasicClockedSPI
+
+        [ArduinoPinDisconnectedAddCodeEntry( ceLoopBegin )]
+        ClockInputPin
+
+        [ArduinoUseBindingCheckSetter( 'UpdateEnabled' )]
+        Enabled
+
+        [OWRequiredPin]
+        [OWPrimaryPin]
+        [ArduinoExclude]
+        [ArduinoDirectPinTemplate]
+        ResetOutputPin : TOWArduinoDigitalInterruptOutputSingleConnectionSourcePin
+
+        Key: TArduinoRFID522Key
+    ;
+;
